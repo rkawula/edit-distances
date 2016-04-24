@@ -22,7 +22,7 @@ def lookup_levenshtein(a, b, d)
   j = b.size
   return d[i][j] unless d[i][j].nil?
   if i == 0 || j == 0
-    d[i][j] = [i, j].min
+    d[i][j] = [i, j].max
   else
     actions = [(lookup_levenshtein a, b.chop, d) + 1,
               (lookup_levenshtein a.chop, b, d) + 1,
