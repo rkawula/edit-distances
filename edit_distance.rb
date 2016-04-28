@@ -7,6 +7,7 @@ def levenshtein(a, b)
           (levenshtein a.chop, b.chop) + (a[-1] == b[-1] ? 0 : 1)].min
 end
 
+# Dynamic programming top-down levenshtein edit distance.
 def memoized_levenshtein(a, b)
   d = []
   (a.size + 1).times do |i|
