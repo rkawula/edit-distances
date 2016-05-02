@@ -2,7 +2,6 @@ package me.rkawula.presentation;
 
 public class LevenshteinDistance {
 	
-	// Works
 	public static int editDistance(String a, String b) {
 		int i = a.length();
 		int j = b.length();

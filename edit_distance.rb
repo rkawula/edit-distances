@@ -2,7 +2,7 @@
 def levenshtein(a, b)
   return b.size if a.size == 0
   return a.size if b.size == 0
-  return [(levenshtein a, b.chop) + 1,
+  [(levenshtein a, b.chop) + 1,
           (levenshtein a.chop, b) + 1,
           (levenshtein a.chop, b.chop) + (a[-1] == b[-1] ? 0 : 1)].min
 end
@@ -30,5 +30,5 @@ def lookup_levenshtein(a, b, d)
               (lookup_levenshtein a.chop, b.chop, d) + (a[-1] == b[-1] ? 0 : 1)]
     d[i][j] = actions.min
   end
-  return d[i][j]
+  d[i][j]
 end
