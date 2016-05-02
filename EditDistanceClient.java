@@ -1,5 +1,3 @@
-package me.rkawula.presentation;
-
 import java.util.Scanner;
 
 public class EditDistanceClient {
