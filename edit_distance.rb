@@ -1,7 +1,7 @@
 # RUBY
 
-# Naive recursive levenshtein edit distance.
 module EditDistance
+  # Naive recursive levenshtein edit distance.
   def levenshtein(a, b)
     return b.size if a.size == 0
     return a.size if b.size == 0
